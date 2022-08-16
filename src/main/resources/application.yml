@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test
+    username: sa
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  mail:
+    default-encoding: UTF-8
+    protocol: smtp
+    host: smtp.qq.com
+    port: 25
+    username: your_email
+    password: email_password
+
