@@ -58,6 +58,12 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.15.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -65,7 +71,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <env>
+                            <HTTP_PROXY>http://192.168.74.1</HTTP_PROXY>
+                            <HTTPS_PROXY>https://192.168.74.1</HTTPS_PROXY>
+                        </env>
+                    </image>
+                </configuration>
             </plugin>
+
         </plugins>
     </build>
 
